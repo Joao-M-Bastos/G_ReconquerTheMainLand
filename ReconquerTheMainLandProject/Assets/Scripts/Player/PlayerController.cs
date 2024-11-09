@@ -75,10 +75,11 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     public void Attack()
     {
-        if (_fireAction.WasPerformedThisFrame())
+        if (_fireAction.WasPerformedThisFrame() && _shoulder.CanAttack)
         {
-            _shoulder.Attack();
-            _rightHand.Attack();
+            _rightHand.Attack(out float attackSpeed);
+            _shoulder.Attack(attackSpeed);
+            
         }
     }
     #endregion

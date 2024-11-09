@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: ShortSword
   Damage: 1
-  AttacksPerSecond: 1
+  AttacksDuration: 0.5
   ProjectileSpeed: 10
   ProjectrileLifeTime: 0.3
   WeaponPrefab: {fileID: 8756385628817406179, guid: cf35e91b870d3424ba2a8824d2da1aa8, type: 3}

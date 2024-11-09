@@ -6,6 +6,8 @@ public abstract class Weapon : MonoBehaviour
 {
     [SerializeField] WeaponData _weaponData;
 
+    public WeaponData WeaponData => _weaponData;
+
     public abstract void Attack(Transform aimTransform, IDamageable projenitor);
 
     protected void GenereteProjectile(Transform aimTransform, IDamageable projenitor)

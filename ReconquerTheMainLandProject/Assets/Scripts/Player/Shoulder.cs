@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shoulder : MonoBehaviour
@@ -8,19 +9,30 @@ public class Shoulder : MonoBehaviour
     Camera _cameraMain;
     Animator _shoulderAnimator;
 
+    float _attackCooldown;
+    bool _canAttack;
+
+    public bool CanAttack => _canAttack;
+
     private void Awake()
     {
         _shoulderAnimator = GetComponent<Animator>();
         _cameraMain = Camera.main;
     }
 
-    public void Attack()
+    public void Attack(float attackSpeed)
     {
+        _shoulderAnimator.SetFloat("AttackSpeed", attackSpeed);
         _shoulderAnimator.SetTrigger("Attack");
+
+        _attackCooldown = 1/attackSpeed;
     }
 
     private void Update()
     {
+        _attackCooldown -= Time.deltaTime;
+        _canAttack = _attackCooldown < 0;
+
         RotateToMouse();
     }
 
