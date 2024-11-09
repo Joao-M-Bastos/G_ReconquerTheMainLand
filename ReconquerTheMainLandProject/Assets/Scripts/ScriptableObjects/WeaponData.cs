@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "Weapon")]
+public class WeaponData : ScriptableObject
+{
+    public string Name;
+    public int Damage;
+    public float AttacksPerSecond;
+    public float ProjectileSpeed;
+    public float ProjectrileLifeTime;
+    public GameObject WeaponPrefab;
+    public GameObject ProjectilePrefab;
+}
