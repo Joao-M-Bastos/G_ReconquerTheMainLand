@@ -50,17 +50,16 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         Vector2 velocity = _playerRB.velocity;
 
+        float acceleration = _playerData.Aceleration;
+
         //Desaceleration
         if (inputDirection == Vector2.zero)
         {
-            velocity.x = Mathf.Lerp(velocity.x, 0, _playerData.Aceleration * 4);
-            velocity.y = Mathf.Lerp(velocity.y, 0, _playerData.Aceleration * 4);
+            acceleration *= 4;
         }
-        else
-        {
-            velocity.x = Mathf.Lerp(velocity.x, inputDirection.x * _playerData.Speed, _playerData.Aceleration);
-            velocity.y = Mathf.Lerp(velocity.y, inputDirection.y * _playerData.Speed, _playerData.Aceleration);
-        }
+        
+        velocity.x = Mathf.Lerp(velocity.x, inputDirection.x * _playerData.Speed, acceleration);
+        velocity.y = Mathf.Lerp(velocity.y, inputDirection.y * _playerData.Speed, acceleration);
 
         _playerRB.velocity = velocity;
     }
@@ -77,9 +76,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     {
         if (_fireAction.WasPerformedThisFrame() && _shoulder.CanAttack)
         {
-            _rightHand.Attack(out float attackSpeed);
-            _shoulder.Attack(attackSpeed);
-            
+            _rightHand.Attack(out float attackDuration, out float chargeDuration);
+            _shoulder.Attack(attackDuration, chargeDuration);
         }
     }
     #endregion

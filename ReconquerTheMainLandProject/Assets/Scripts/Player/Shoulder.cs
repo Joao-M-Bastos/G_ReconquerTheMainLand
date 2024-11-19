@@ -20,12 +20,22 @@ public class Shoulder : MonoBehaviour
         _cameraMain = Camera.main;
     }
 
-    public void Attack(float attackSpeed)
+    public void Attack(float attackDuration, float chargeDuration)
     {
-        _shoulderAnimator.SetFloat("AttackSpeed", attackSpeed);
-        _shoulderAnimator.SetTrigger("Attack");
+        _attackCooldown = attackDuration + chargeDuration;
 
-        _attackCooldown = 1/attackSpeed;
+        float attackAnimSpeed = 100;
+        float  chargeAnimSpeed = 100;
+
+        if (attackDuration != 0)
+            attackAnimSpeed = 1 / attackDuration;
+
+        if (chargeDuration != 0)
+            chargeAnimSpeed = 1 / chargeDuration;
+
+        _shoulderAnimator.SetFloat("AttackSpeed", attackAnimSpeed);
+        _shoulderAnimator.SetFloat("ChargeSpeed", chargeAnimSpeed);
+        _shoulderAnimator.SetTrigger("Attack");
     }
 
     private void Update()
