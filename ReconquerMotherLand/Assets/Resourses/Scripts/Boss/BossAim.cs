@@ -11,6 +11,8 @@ public class BossAim : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
+    
+
     public Transform PlayerTransform => player;
 
     // Update is called once per frame

@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDataBase: {fileID: 11400000, guid: a522f08581c4e2449b4ae643bbba89de, type: 2}
+  damageBuff: 0
 --- !u!1 &6630944710416061079
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +92,6 @@ GameObject:
   - component: {fileID: 2650656147566168450}
   - component: {fileID: 3108041245640418413}
   - component: {fileID: 6170162549014064650}
-  - component: {fileID: 1746168702363936712}
   - component: {fileID: 3831561482822340303}
   - component: {fileID: 8887353468322689185}
   - component: {fileID: 4866590473775193196}
@@ -201,21 +201,6 @@ MonoBehaviour:
   - {fileID: 4763201558646260274}
   - {fileID: 709926899378733544}
   walkingSound: {fileID: 4866590473775193196}
---- !u!114 &1746168702363936712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6630944710416061079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33c2c087ba054941bf0616f57231b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySize: 5
-  inventorySystem:
-    inventorySlots: []
 --- !u!114 &3831561482822340303
 MonoBehaviour:
   m_ObjectHideFlags: 0
