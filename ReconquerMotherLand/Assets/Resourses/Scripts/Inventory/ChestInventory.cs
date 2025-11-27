@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class ChestInventory : InventoryHolder, IInteractable
 {
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
     public void Interact(Interactor interactor, out bool interactionSuccess)
     {
         OnDynamicInventoryDisplayRequest?.Invoke(inventorySystem);
@@ -17,8 +15,8 @@ public class ChestInventory : InventoryHolder, IInteractable
     {
     }
 
-    public void HasInteracted(Interactor interactor, out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
-        hasInteracted = false;
+        return false;
     }
 }

@@ -8,7 +8,6 @@ public class GaiaTips : MonoBehaviour, IInteractable
 {
     DialogueTrigger dialogueTrigger;
 
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
     private void Awake()
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
@@ -18,9 +17,9 @@ public class GaiaTips : MonoBehaviour, IInteractable
 
     }
 
-    public void HasInteracted(Interactor interactor, out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
-        hasInteracted = false;
+        return false;
     }
 
     public void Interact(Interactor interactor, out bool interactionSuccess)

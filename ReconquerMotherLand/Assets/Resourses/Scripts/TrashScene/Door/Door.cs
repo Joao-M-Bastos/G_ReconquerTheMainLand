@@ -11,8 +11,6 @@ public class Door : MonoBehaviour, IInteractable
     bool isOpend;
     Animator animator;
 
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -48,8 +46,8 @@ public class Door : MonoBehaviour, IInteractable
 
     }
 
-    public void HasInteracted(Interactor interactor,out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
-        hasInteracted = isOpend;
+        return isOpend;
     }
 }

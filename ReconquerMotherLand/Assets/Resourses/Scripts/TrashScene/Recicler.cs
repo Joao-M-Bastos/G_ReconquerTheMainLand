@@ -20,8 +20,6 @@ public class Recicler : MonoBehaviour, IInteractable
 
     public bool IsActive => isActive;
 
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
     public void AddItem(InventoryItemData itemToAdd, out bool consumed)
     {
         consumed = false;
@@ -106,9 +104,9 @@ public class Recicler : MonoBehaviour, IInteractable
         throw new NotImplementedException();
     }
 
-    public void HasInteracted(Interactor interactor, out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
-        hasInteracted = !isActive;
+        return !isActive;
     }
 
 }

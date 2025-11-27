@@ -24,8 +24,6 @@ public class WeaponEquip : MonoBehaviour, IInteractable
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
     }
 
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -48,7 +46,7 @@ public class WeaponEquip : MonoBehaviour, IInteractable
         throw new System.NotImplementedException();
     }
 
-    public void HasInteracted(Interactor interactor, out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
         throw new System.NotImplementedException();
     }

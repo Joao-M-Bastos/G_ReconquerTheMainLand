@@ -10,8 +10,6 @@ public class Tutorial_RecicleLever : MonoBehaviour, IInteractable
     [SerializeField] protected ReciclerTutorial recicler;
     protected Animator animator;
 
-    public UnityAction<IInteractable> onInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -34,8 +32,8 @@ public class Tutorial_RecicleLever : MonoBehaviour, IInteractable
 
     }
 
-    public void HasInteracted(Interactor interactor, out bool hasInteracted)
+    public bool HasInteracted(Interactor interactor)
     {
-        hasInteracted = recicler.IsActive;
+        return recicler.IsActive;
     }
 }
