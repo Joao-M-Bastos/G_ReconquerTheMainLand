@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6576f71fa2203459e4fe95237cfe67, type: 3}
+  m_Name: bu_Paper
+  m_EditorClassIdentifier: 
+  ID: 8
+  displayName: Total Life buff
+  description: Improve your life total
+  isBuff: 1
+  itemsIcon: {fileID: 21300000, guid: 7f6a61cc75ad24d4fa72884683da9a98, type: 3}
+  maxStackSize: 16
+  itemPrefab: {fileID: 2733493166156245927, guid: d762d25060cdf1f468b5bb6d67cb01d3,
+    type: 3}
