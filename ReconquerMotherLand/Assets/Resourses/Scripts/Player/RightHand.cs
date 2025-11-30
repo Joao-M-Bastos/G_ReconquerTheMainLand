@@ -37,8 +37,11 @@ public class RightHand : MonoBehaviour
 
     public void SetSword(int id)
     {
-        if(currentWeaponObj != null)
+        if (currentWeaponObj != null)
+        {
+            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
             Destroy(currentWeaponObj);
+        }
 
         currentWeaponObj = Instantiate(weaponDataBase.GetWeapon(id).weaponPrefab, this.transform);
         currentWeapon = currentWeaponObj.GetComponent<BaseWeapon>();
@@ -47,7 +50,10 @@ public class RightHand : MonoBehaviour
     public void SetSword(string name = "")
     {
         if (currentWeaponObj != null)
+        {
+            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
             Destroy(currentWeaponObj);
+        }
 
         currentWeaponObj = Instantiate(weaponDataBase.GetWeapon(name).weaponPrefab, this.transform);
         currentWeapon = currentWeaponObj.GetComponent<BaseWeapon>();
@@ -56,7 +62,10 @@ public class RightHand : MonoBehaviour
     public void SetSword(WeaponData data)
     {
         if (currentWeaponObj != null)
+        {
+            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
             Destroy(currentWeaponObj);
+        }
 
         currentWeaponObj = Instantiate(data.weaponPrefab, this.transform);
         currentWeapon = currentWeaponObj.GetComponent<BaseWeapon>();
