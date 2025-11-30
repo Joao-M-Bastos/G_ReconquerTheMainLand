@@ -39,7 +39,7 @@ public class RightHand : MonoBehaviour
     {
         if (currentWeaponObj != null)
         {
-            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
+            Instantiate(GetWeapon().weaponPickup, this.transform.position +(-transform.right*0.5f)+ (transform.forward * 0.75f), this.transform.rotation);
             Destroy(currentWeaponObj);
         }
 
@@ -51,7 +51,7 @@ public class RightHand : MonoBehaviour
     {
         if (currentWeaponObj != null)
         {
-            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
+            Instantiate(GetWeapon().weaponPickup, this.transform.position + (-transform.right * 0.5f) + transform.forward * 0.75f, this.transform.rotation);
             Destroy(currentWeaponObj);
         }
 
@@ -63,7 +63,7 @@ public class RightHand : MonoBehaviour
     {
         if (currentWeaponObj != null)
         {
-            Instantiate(GetWeapon().weaponPickup, this.transform.position + transform.forward * 0.5f, this.transform.rotation);
+            Instantiate(GetWeapon().weaponPickup, this.transform.position + (-transform.right * 0.5f) + transform.forward * 0.75f, this.transform.rotation);
             Destroy(currentWeaponObj);
         }
 

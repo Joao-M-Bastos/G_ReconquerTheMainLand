@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4648882623431132875}
   - component: {fileID: 7383661214025385008}
   - component: {fileID: 1911040929534071580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpearPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 20
-  weaponData: {fileID: 11400000, guid: 74218c835fa2cf641a2d1b5ec93a7686, type: 2}
+  weaponData: {fileID: 11400000, guid: aca0309bddf670646b709955f5109d11, type: 2}
   pickupRadius: 1
 --- !u!135 &1911040929534071580
 SphereCollider:
