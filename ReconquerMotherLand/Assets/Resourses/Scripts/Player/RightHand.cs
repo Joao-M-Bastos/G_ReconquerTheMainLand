@@ -62,6 +62,11 @@ public class RightHand : MonoBehaviour
         currentWeapon = currentWeaponObj.GetComponent<BaseWeapon>();
     }
 
+    public WeaponData GetWeapon()
+    {
+        return currentWeapon.GetWeaponData();
+    }
+
     public bool IsWeaponActive()
     {
         return currentWeapon.isWeaponActive;

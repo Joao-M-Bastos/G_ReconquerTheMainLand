@@ -18,3 +18,5 @@ MonoBehaviour:
   animToTrigger: GountletAttack
   weaponPrefab: {fileID: 3338447272768184362, guid: 69f4fe151d4ed144988906cb0f89a385,
     type: 3}
+  weaponPickup: {fileID: 8011528470601229578, guid: 0e26f2d51102b6e4a9565efa9c1a55c6,
+    type: 3}

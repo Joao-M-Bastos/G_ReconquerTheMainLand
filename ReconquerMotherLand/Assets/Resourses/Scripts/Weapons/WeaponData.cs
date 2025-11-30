@@ -11,4 +11,5 @@ public class WeaponData : ScriptableObject
     public int damage;
     public string animToTrigger;
     public GameObject weaponPrefab;
+    public GameObject weaponPickup;
 }

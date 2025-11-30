@@ -41,6 +41,10 @@ public class WeaponEquip : MonoBehaviour, IInteractable
         interactionSuccess = false;
         if(interactor.gameObject.TryGetComponent(out PlayerScpt player))
         {
+
+            Instantiate(player.RightHand.GetWeapon().weaponPickup, this.transform);
+            
+
             player.RightHand.SetSword(weaponData);
             Destroy(gameObject);
         }

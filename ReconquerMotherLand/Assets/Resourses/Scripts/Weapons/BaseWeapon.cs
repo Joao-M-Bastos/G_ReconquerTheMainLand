@@ -59,5 +59,8 @@ public abstract class BaseWeapon : MonoBehaviour
     public abstract void HitOtherCallback();
 
 
-
+    public WeaponData GetWeaponData()
+    {
+        return weaponData;
+    }
 }

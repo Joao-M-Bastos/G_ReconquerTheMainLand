@@ -18,3 +18,5 @@ MonoBehaviour:
   animToTrigger: SpearAttack
   weaponPrefab: {fileID: 3338447272768184362, guid: 24ebba48842fbdc43b484a4a1596eb45,
     type: 3}
+  weaponPickup: {fileID: 2202303083700858850, guid: dbdfe5810ca2ef64b9400a55b2f5949f,
+    type: 3}
