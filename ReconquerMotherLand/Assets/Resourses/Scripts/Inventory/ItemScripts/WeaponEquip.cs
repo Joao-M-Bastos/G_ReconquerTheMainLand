@@ -38,7 +38,12 @@ public class WeaponEquip : MonoBehaviour, IInteractable
 
     public void Interact(Interactor interactor, out bool interactionSuccess)
     {
-        throw new System.NotImplementedException();
+        interactionSuccess = false;
+        if(interactor.gameObject.TryGetComponent(out PlayerScpt player))
+        {
+            player.RightHand.SetSword(weaponData);
+            Destroy(gameObject);
+        }
     }
 
     public void EndInteraction()
@@ -48,6 +53,6 @@ public class WeaponEquip : MonoBehaviour, IInteractable
 
     public bool HasInteracted(Interactor interactor)
     {
-        throw new System.NotImplementedException();
+        return false;
     }
 }

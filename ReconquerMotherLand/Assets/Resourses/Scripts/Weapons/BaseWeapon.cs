@@ -58,4 +58,6 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public abstract void HitOtherCallback();
 
+
+
 }
